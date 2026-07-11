@@ -1,0 +1,79 @@
+@import 'tailwindcss';
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: 'Noto Sans KR', system-ui, sans-serif;
+  background-color: #0d0906;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hero-title {
+  font-family: 'Gowun Batang', serif;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+}
+
+.font-serif-title {
+  font-family: 'Gowun Batang', serif;
+}
+
+/* 밝은 배경 위 텍스트 시인성용 섀도 */
+.text-glow {
+  text-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.5),
+    0 8px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* 아주 느린 Ken Burns 줌 (15초 주기, 왕복) */
+@keyframes ken-burns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+.animate-ken-burns {
+  animation: ken-burns 15s ease-in-out infinite alternate;
+}
+
+/* 스크롤 fade-up */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-ken-burns {
+    animation: none;
+  }
+
+  .fade-up {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
