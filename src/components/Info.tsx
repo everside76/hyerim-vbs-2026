@@ -22,14 +22,16 @@ export default function Info() {
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <button
-              type="button"
-              className="rounded-full bg-white px-7 py-3.5 text-sm font-medium text-black transition-colors hover:bg-neutral-200"
+            <a
+              href="https://forms.gle/A4jbEx69i5YViBkH6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-white px-7 py-3.5 text-center text-sm font-medium text-black transition-colors hover:bg-neutral-200"
             >
-              참가 신청 (추후 안내)
-            </button>
+              참가 신청하기
+            </a>
             <span className="text-sm text-white/50">
-              신청 링크는 오픈 시 이곳에 안내됩니다.
+              구글 폼으로 연결됩니다.
             </span>
           </div>
 
