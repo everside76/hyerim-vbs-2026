@@ -1,27 +1,39 @@
 const weeks = [
   {
-    week: '1주차',
-    date: '07.26',
-    title: '개강 · 여정의 시작',
-    desc: '여름성경학교 개강. 주제곡과 함께 28일 성경읽기의 첫 걸음을 뗍니다.',
+    week: '신청 기간',
+    date: '7.12 ~ 7.25',
+    title: '참가 신청',
+    desc: '구글폼 온라인 개별 신청, 회비 20,000원.',
   },
   {
-    week: '2주차',
-    date: '08.02',
-    title: '다윗과 광야',
-    desc: 'DAVID CAFE 오픈, 광야의 이야기를 따라가는 한 주. 세부 내용 추후 안내.',
+    week: '개강',
+    date: '7.26 (주일)',
+    title: '걷다 · 28일 성경 읽기 시작',
+    desc: '여름성경학교 개강. 교재 및 굿즈 교환권 배부.',
   },
   {
-    week: '3주차',
-    date: '08.09',
-    title: '말씀과 함께',
-    desc: '말씀카드로 함께 외우고 나누는 한 주. 세부 내용 추후 안내.',
+    week: '전시',
+    date: '8.16 (주일)',
+    title: "읽다 · '다윗의 서재' 오픈",
+    desc: '도서 테마 전시 시작, 굿즈 배부.',
   },
   {
-    week: '4주차',
-    date: '08.23',
-    title: '마침 · 승리는 여호와께',
-    desc: '온세대가 함께하는 마침 예배와 나눔. 세부 내용 추후 안내.',
+    week: '공연',
+    date: '8.21 (금) 저녁 8시',
+    title: "보다 · 뮤지컬 '에벤 EBEN'",
+    desc: '더 에벤 미니스트리 공연, 온세대가 함께 관람합니다.',
+  },
+  {
+    week: '축제',
+    date: '8.22 (토)',
+    title: '놀다 · 다윗 페스티벌',
+    desc: '온세대가 함께하는 체험 활동과 공동체 놀이.',
+  },
+  {
+    week: '마침',
+    date: '8.23 (주일)',
+    title: '여정의 마무리',
+    desc: '4주 여정을 마무리하는 주일.',
   },
 ]
 
@@ -42,7 +54,7 @@ export default function Schedule() {
           <p className="mt-6 text-base text-white/60">07.26 개강 → 08.23 마침</p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-3xl border border-white/10 bg-white/5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-3xl border border-white/10 bg-white/5 sm:grid-cols-2 lg:grid-cols-3">
           {weeks.map((w, i) => (
             <div
               key={w.week}

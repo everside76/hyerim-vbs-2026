@@ -17,8 +17,9 @@ export default function Info() {
             걸어볼까요?
           </h2>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-white/70">
-            혜림교회 아동부 여름성경학교에 온세대를 초대합니다. 참가 신청 및 자세한
-            안내는 아동부로 문의해 주세요.
+            혜림교회 아동부 여름성경학교에 온세대를 초대합니다. 참가 신청은
+            2026.7.12(주일)부터 7.25(토)까지 구글폼으로 개별 신청해 주세요.
+            자세한 안내는 아동부로 문의해 주세요.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -38,9 +39,29 @@ export default function Info() {
           <div className="mt-12 grid grid-cols-1 gap-6 border-t border-white/10 pt-8 sm:grid-cols-3">
             <div>
               <p className="text-xs font-medium tracking-widest text-amber-300/70">
-                문의
+                신청 기간
               </p>
-              <p className="mt-2 text-white/85">혜림교회 아동부</p>
+              <p className="mt-2 text-white/85">2026.7.12(주일) ~ 7.25(토)</p>
+            </div>
+            <div>
+              <p className="text-xs font-medium tracking-widest text-amber-300/70">
+                신청 방법
+              </p>
+              <p className="mt-2 text-white/85">구글폼 온라인 개별 신청</p>
+            </div>
+            <div>
+              <p className="text-xs font-medium tracking-widest text-amber-300/70">
+                회비
+              </p>
+              <p className="mt-2 text-white/85">20,000원</p>
+            </div>
+            <div>
+              <p className="text-xs font-medium tracking-widest text-amber-300/70">
+                배부 안내
+              </p>
+              <p className="mt-2 text-white/85">
+                교재·굿즈 교환권 7/26 배부 · 굿즈 8/16 배부
+              </p>
             </div>
             <div>
               <p className="text-xs font-medium tracking-widest text-amber-300/70">
@@ -50,9 +71,9 @@ export default function Info() {
             </div>
             <div>
               <p className="text-xs font-medium tracking-widest text-amber-300/70">
-                기간
+                문의
               </p>
-              <p className="mt-2 text-white/85">2026.07.26 ~ 08.23</p>
+              <p className="mt-2 text-white/85">혜림교회 아동부</p>
             </div>
           </div>
         </div>
