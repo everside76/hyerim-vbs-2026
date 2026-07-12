@@ -24,7 +24,8 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
-      - run: npm run build
+      # Pages는 /hyerim-vbs-2026/ 하위 경로로 서빙 (Vercel은 기본 base '/')
+      - run: npm run build -- --base=/hyerim-vbs-2026/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
