@@ -54,7 +54,7 @@ export default function Hero() {
         <p className="text-glow mb-5 text-sm tracking-[0.2em] text-white/85 md:text-base">
           혜림교회 온세대가 함께하는 아동부 여름성경학교
         </p>
-        <h1 className="hero-title text-glow whitespace-nowrap font-medium text-[6vw] text-white md:text-[4.5vw]">
+        <h1 className="hero-title text-glow whitespace-nowrap font-bold text-[7vw] text-white md:text-[5vw]">
           다윗과 함께하는 <span className="text-amber-300">2026 나의 여름</span>
         </h1>
         <div className="text-glow mt-6 rounded-full border border-white/40 px-6 py-2 text-sm tracking-widest text-white md:text-base">
