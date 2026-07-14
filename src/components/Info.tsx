@@ -67,7 +67,7 @@ export default function Info() {
               <p className="text-xs font-medium tracking-widest text-amber-300/70">
                 장소
               </p>
-              <p className="mt-2 text-white/85">혜림교회 본당 및 교육관</p>
+              <p className="mt-2 text-white/85">혜림교회 본당</p>
             </div>
             <div>
               <p className="text-xs font-medium tracking-widest text-amber-300/70">
