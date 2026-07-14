@@ -1,7 +1,7 @@
 const overviewCards = [
   { label: '기간', value: '07.26 ~ 08.23', sub: '4주간의 여정' },
   { label: '대상', value: '어린이·부모·누구나', sub: '혜림교회 온세대 환영' },
-  { label: '장소', value: '혜림교회', sub: '본당' },
+  { label: '장소', value: '혜림교회', sub: '' },
   { label: '주제', value: '다윗과 함께하는', sub: '나의 여름' },
 ]
 
@@ -38,7 +38,9 @@ export default function About() {
               <p className="mt-3 font-serif-title text-2xl text-white md:text-[1.75rem]">
                 {card.value}
               </p>
-              <p className="mt-2 text-sm text-white/60">{card.sub}</p>
+              {card.sub && (
+                <p className="mt-2 text-sm text-white/60">{card.sub}</p>
+              )}
             </div>
           ))}
         </div>
