@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import Logo from './Logo'
 
 const navLinks = [
@@ -8,14 +9,40 @@ const navLinks = [
 ]
 
 export default function Hero() {
+  // 배경 영상 재생 여부: 모션 최소화 선호 사용자 또는 영상 로드 실패 시 정지 이미지로 폴백
+  const [useVideo, setUseVideo] = useState(true)
+
+  useEffect(() => {
+    // prefers-reduced-motion 사용자는 영상 대신 정지 이미지(ken-burns) 사용
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setUseVideo(false)
+    }
+  }, [])
+
   return (
     <section className="relative h-screen w-full overflow-hidden bg-black">
-      {/* 배경: 석양 광야를 달리는 다윗 + 느린 Ken Burns 줌 */}
-      <img
-        src={`${import.meta.env.BASE_URL}hero.jpg`}
-        alt="석양이 지는 광야를 달리는 다윗"
-        className="absolute inset-0 h-full w-full object-cover object-[center_65%] animate-ken-burns"
-      />
+      {/* 배경: 석양 광야를 달리는 다윗 (영상), 폴백은 정지 이미지 + 느린 Ken Burns 줌 */}
+      {useVideo ? (
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          aria-hidden="true"
+          poster={`${import.meta.env.BASE_URL}hero.jpg`}
+          onError={() => setUseVideo(false)}
+          className="absolute inset-0 h-full w-full object-cover object-[center_65%]"
+        >
+          <source src={`${import.meta.env.BASE_URL}hero.webm`} type="video/webm" />
+          <source src={`${import.meta.env.BASE_URL}hero.mp4`} type="video/mp4" />
+        </video>
+      ) : (
+        <img
+          src={`${import.meta.env.BASE_URL}hero.jpg`}
+          alt="석양이 지는 광야를 달리는 다윗"
+          className="absolute inset-0 h-full w-full object-cover object-[center_65%] animate-ken-burns"
+        />
+      )}
       {/* 가독성용 오버레이: 밝은 골드톤 하늘 → 상단 어둡게, 하단은 다음 섹션 배경(#0d0906)으로 연결 */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/20 to-[#0d0906]" />
 
