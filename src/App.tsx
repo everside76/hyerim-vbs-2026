@@ -1,4 +1,5 @@
 import Hero from './components/Hero'
+import PromoVideo from './components/PromoVideo'
 import About from './components/About'
 import Program from './components/Program'
 import Schedule from './components/Schedule'
@@ -12,6 +13,7 @@ export default function App() {
     <>
       <Hero />
       <main>
+        <PromoVideo />
         <About />
         <Program />
         <Schedule />
